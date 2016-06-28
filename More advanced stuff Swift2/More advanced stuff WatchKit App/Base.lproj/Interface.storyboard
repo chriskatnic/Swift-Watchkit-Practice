@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface1-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Interface1" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="More_advanced_stuff_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="5" id="bjt-Gp-11I"/>
+                        <switch width="1" alignment="left" value="YES" title="Flippy Switch" id="0Yg-Ci-BBZ">
+                            <connections>
+                                <action selector="switch_flipped:" destination="AgC-eL-Hgc" id="kfA-Li-PKf"/>
+                            </connections>
+                        </switch>
+                        <button width="1" alignment="left" title="Clicky Button" id="haT-Iw-bo1">
+                            <connections>
+                                <segue destination="i2x-XR-xp0" kind="push" id="l3n-FL-PUY"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="super_advanced_label" destination="bjt-Gp-11I" id="ZeZ-Oj-uUg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Interface2-->
+        <scene sceneID="DuZ-bs-i0W">
+            <objects>
+                <controller title="Interface2" id="i2x-XR-xp0" customClass="InterfaceController2" customModule="More_advanced_stuff_WatchKit_Extension">
+                    <items>
+                        <imageView width="134" height="127" alignment="left" image="Normal" id="jQg-JP-7eC"/>
+                    </items>
+                    <menu key="menu" id="3bm-Cs-Faz">
+                        <items>
+                            <menuItem title="So creative" icon="accept" id="8tR-e9-III">
+                                <connections>
+                                    <action selector="so_creative" destination="i2x-XR-xp0" id="dat-iB-b72"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Wow" icon="accept" id="g2s-JB-x9c">
+                                <connections>
+                                    <action selector="wow" destination="i2x-XR-xp0" id="KJj-mS-Yv2"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Such Profit" icon="accept" id="Krd-nD-pP2">
+                                <connections>
+                                    <action selector="such_profit" destination="i2x-XR-xp0" id="PZD-Ra-zyL"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Very Dizzy" icon="accept" id="Ewz-be-Oy9">
+                                <connections>
+                                    <action selector="very_dizzy" destination="i2x-XR-xp0" id="uSg-eb-aVL"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="such_image" destination="jQg-JP-7eC" id="MPj-Za-Pvr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="446" y="346"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="More_advanced_stuff_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
